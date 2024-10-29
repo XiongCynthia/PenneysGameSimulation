@@ -63,4 +63,4 @@ Arguments:
 ```get_heatmaps(format:str) -> None```: Runs simulations on all deck datasets stored in the "data" folder and stores the results in data/results.json. If the file already exists, no simulation is run. Uses the results data to produce two heatmaps.
 
 Arguments:
-- format: Takes 'html' or 'png' as input. Determines file format of the saved heatmap.
+- `format`: Takes 'html' or 'png' as input. Determines file format of the saved heatmap.
