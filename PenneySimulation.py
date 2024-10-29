@@ -18,7 +18,7 @@ def generate_sequence(seed:int|None, seq:list) -> list:
     Randomly generate a sequence of the given values.
 
     Args:
-        seed: Random seed; use no seed if None.
+        seed: Random seed. If None, uses no seed.
         seq: Values for the sequence.
     
     Returns:
@@ -29,11 +29,14 @@ def generate_sequence(seed:int|None, seq:list) -> list:
     return seq
 
 
-def generate_data(n: int) -> None:
+def generate_data(n:int) -> None:
     '''
-    Augments the existing data with n additional simulations.
+    Adds a new deck dataset with n additional randomly shuffled decks to the "data" folder.
     '''
-    deck_data = np.empty(n, dtype=np.ndarray) # All card decks
+    SEED = 420
+    np.random.seed(SEED)
+
+    deck_data = np.empty(n, dtype='<U52') # Array of n card decks
     
     for iter in range(n):
         # Show progress
@@ -58,10 +61,10 @@ def generate_data(n: int) -> None:
 
 def score_deck(deck:str, seq1:str, seq2:str) -> tuple[int, int, int, int]:
     '''
-    Simulate a game with the given deck and color sequences.
+    Simulates a game with the given deck and color sequences.
 
     Args:
-        deck: Decks of cards consisting of 0's (for black) and 1's (for red).
+        deck: A deck of cards consisting of 0's (for black) and 1's (for red).
         seq1: Color sequence for player.
         seq2: Color sequence for opposing player.
 
@@ -252,7 +255,7 @@ def __prepare_html(wins:np.ndarray, ties:np.ndarray, title:str) -> go.Figure :
                                colorbar=dict(ticksuffix='%')
                               ),
                    layout=go.Layout(plot_bgcolor='lightgray'))
-    fig.update_layout(width=750, height=750, 
+    fig.update_layout(width=700, height=700, 
                       title=title, title_font_size=TITLE_SIZE,
                       title_x=0.5, title_y=0.92,
                       xaxis=dict(title='Me', title_font=dict(size=LABEL_SIZE), tickfont=dict(size=TICK_LABEL_SIZE)), 
@@ -383,5 +386,8 @@ def get_heatmaps(format:str) -> None:
         
         # Add caption
         fig.suptitle('Cell text are formatted as follows: Chance of Win (Chance of Tie)', x=0.3, y=0.01)
-        fig.savefig('figs/heatmaps.png')
+        fig.savefig('figs/heatmaps.png', bbox_inches='tight')
+
+    else:
+        print(f'{format} is not a valid file format. Please use \'png\' or \'html\'.')
     return
