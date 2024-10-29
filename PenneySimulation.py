@@ -5,7 +5,7 @@ import json
 
 # Jupyter notebook
 from IPython.display import clear_output
-
+bo
 # Data visualization
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -128,7 +128,7 @@ def __process_dataset(data) -> list[float]:
     data = data*100
     # Round all values to the nearest whole number
     data = np.round(data)
-    # Flip on the axis such that the origin (0,0) is at the bottom-let
+    # Flip on the axis such that the origin (0,0) is at the bottom-left
     data = np.flip(data, axis=1)
     # To list, because json can't directly save a numpy array
     return data.tolist()
