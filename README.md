@@ -1,6 +1,6 @@
 ## Introduction
 
-Penney’s Game is a fascinating mind-bender in probability that’s deceptively simple yet full of surprises. Imagine you’re flipping a fair coin repeatedly, trying to predict which sequence of heads and tails will appear first. Here’s the twist: even if two players choose sequences of the same length, the game is not fair! In fact, the order of the chosen sequences creates unexpected advantages, leading to counterintuitive outcomes. This game of strategic sequence-choosing is both a lesson in probability paradoxes and an exploration of how small changes can tip the odds in a seemingly fair game.
+Penney’s Game is a fascinating mind-bender in probability that’s deceptively simple yet full of surprises. Imagine you’re flipping a fair coin repeatedly, trying to predict which sequence of heads and tails will appear first. Here’s the twist: even if two players choose sequences of the same length, the game is not fair! In fact, the order of the chosen sequences creates unexpected advantages, leading to counterintuitive outcomes. This game of strategic sequence-choosing is both a lesson in the nature of real-life probabilities and an exploration of how small changes can tip the odds in a seemingly fair game.
 
 For more background, check out these resources:
 - [Humble and Nishiyama's 2-Page paper](https://www.datascienceassn.org/sites/default/files/Humble-Nishiyama%20Randomness%20Game%20-%20A%20New%20Variation%20on%20Penney%27s%20Coin%20Game.pdf) on their Randomness Game, a variation of Penney's game
