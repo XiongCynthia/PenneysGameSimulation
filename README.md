@@ -30,19 +30,32 @@ These plots were generated through [RunPenneySimulation.ipynb](https://nbviewer.
 
 ## Documentation
 
-```generate_sequence(seed, seq)```
-
-Generates a randomly shuffled sequence from the given values in seq.
+```generate_sequence(seed:int|None, seq:list) -> list```: Generates a randomly shuffled sequence from the given values in seq, and returns it.
 
 Arguments:
-- `seed`: Random seed; use no seed if None.
+- `seed`: Random seed. If None, uses no seed.
 - `seq`: Values for the sequence.
 
-Returns a randomly shuffled sequence.
 
-```generate_data(n:int)```
+<br />
 
-Augments the existing deck datasets in the "data" folder with `n` additional randomly shuffled decks. Stores the datasets as .npy files.
+```generate_data(n:int) -> None```: Adds a new deck dataset with n additional randomly shuffled decks to the "data" folder. Stores the datasets as .npy files.
 
 Arguments:
 - `n`: Number of decks
+
+<br />
+
+```score_deck(deck:str, seq1:str, seq2:str) -> tuple[int, int, int, int]```: Simulates a game with the given deck and color sequences. Returns the tallied points of each player for each game variation in the following order: p1cards, p2cards, p1tricks, p2tricks.
+
+Arguments:
+- `deck`: A deck of cards consisting of 0's (for black) and 1's (for red).
+- `seq1`: Color sequence for player.
+- `seq2`: Color sequence for opposing player.
+
+<br />
+
+```get_heatmaps(format:str) -> None```: Runs simulations on all deck datasets stored in the "data" folder and stores the results in data/results.json. If the file already exists, no simulation is run. Uses the results data to produce two heatmaps.
+
+Arguments:
+- format: Takes 'html' or 'png' as input. Determines file format of the saved heatmap.
