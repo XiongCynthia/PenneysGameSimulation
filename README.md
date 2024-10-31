@@ -27,7 +27,7 @@ In our two variations of Penney's game, two players compete with a standard deck
 
 ### Simulation Results
 
-![heatmaps.png](figs/heatmaps.png)
+![Side-by-side heatmaps of both game variations conveying winning chances of every possible color sequence combination. Every color sequence has a "winning" opposing sequence. The heatmaps are practically identical, except the heatmap for the "cards" game variation has more skewed probability values.](figs/heatmaps.png)
 
 Alternatively, see html versions for [cards variation](https://htmlpreview.github.io/?https://github.com/XiongCynthia/PenneysGameSimulation/blob/main/figs/cards.html) and [tricks variation](https://htmlpreview.github.io/?https://github.com/XiongCynthia/PenneysGameSimulation/blob/main/figs/tricks.html) (made with Plotly).
 
