@@ -31,7 +31,7 @@ In our two variations of Penney's game, two players compete with a standard deck
 
 Alternatively, see html versions for [cards variation](https://htmlpreview.github.io/?https://github.com/XiongCynthia/PenneysGameSimulation/blob/main/figs/cards.html) and [tricks variation](https://htmlpreview.github.io/?https://github.com/XiongCynthia/PenneysGameSimulation/blob/main/figs/tricks.html) (made with Plotly).
 
-These plots were generated through [RunPenneySimulation.ipynb](https://nbviewer.org/github/XiongCynthia/PenneysGameSimulation/blob/main/RunPenneySimulation.ipynb).
+These plots were generated through [RunPenneySimulation.ipynb](https://nbviewer.org/github/XiongCynthia/PenneysGameSimulation/blob/main/RunPenneySimulation.ipynb) using [PenneySimulation.py](https://github.com/XiongCynthia/PenneysGameSimulation/blob/main/PenneySimulation.py).
 
 ## Documentation
 
